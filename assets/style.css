@@ -1,0 +1,265 @@
+/* ShadowSwitch Ultimate Styling */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+.stApp {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0A1929 0%, #1A2A3A 100%);
+}
+
+/* Main header */
+.main-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 2rem;
+    border-radius: 0 0 30px 30px;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.main-header h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: white;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    letter-spacing: 1px;
+}
+
+.main-header p {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.9);
+    margin: 0.5rem 0 0 0;
+}
+
+/* Cards */
+.premium-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
+}
+
+.premium-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+/* Trust score card */
+.trust-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    border-left: 8px solid;
+    transition: all 0.3s ease;
+}
+
+.trust-label {
+    color: #666;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.trust-value {
+    font-size: 5.5rem;
+    font-weight: 800;
+    line-height: 1;
+    margin: 0.5rem 0;
+}
+
+.trust-status {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+
+/* Device cards */
+.device-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.device-card {
+    background: rgba(255,255,255,0.1);
+    padding: 1rem;
+    border-radius: 15px;
+    border-left: 4px solid;
+    transition: all 0.2s ease;
+}
+
+.device-card:hover {
+    transform: scale(1.02);
+    background: rgba(255,255,255,0.15);
+}
+
+/* Threat feed */
+.threat-feed {
+    background: rgba(0,0,0,0.3);
+    border-radius: 15px;
+    padding: 1rem;
+    height: 250px;
+    overflow-y: auto;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.feed-item {
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    animation: slideIn 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.feed-time {
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.feed-critical { color: #ff4444; }
+.feed-high { color: #ff8800; }
+.feed-medium { color: #ffbb33; }
+.feed-info { color: #4CAF50; }
+
+/* Buttons */
+.stButton button {
+    font-weight: 600 !important;
+    border-radius: 12px !important;
+    padding: 0.6rem 1.2rem !important;
+    transition: all 0.2s ease !important;
+    border: none !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
+}
+
+.stButton button:hover {
+    transform: scale(1.03) !important;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2) !important;
+}
+
+/* Attack button */
+button[kind="primary"] {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff4757 100%) !important;
+    color: white !important;
+}
+
+/* Alerts */
+.stAlert {
+    animation: slideIn 0.5s ease !important;
+    border-left-width: 8px !important;
+    border-radius: 12px !important;
+    margin: 1rem 0 !important;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+/* Metrics */
+.metric-container {
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 1.2rem;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+.metric-value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.metric-label {
+    color: #aaa;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Tabs */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 2rem;
+    background: rgba(255,255,255,0.05);
+    padding: 0.5rem;
+    border-radius: 15px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 0.5rem 1.5rem;
+}
+
+/* Expander */
+.streamlit-expanderHeader {
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    background: rgba(255,255,255,0.05) !important;
+    border-radius: 12px !important;
+    padding: 1rem !important;
+}
+
+/* Sidebar */
+.css-1d391kg {
+    background: linear-gradient(180deg, #0A1929 0%, #1A2A3A 100%);
+}
+
+.sidebar-header {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    border-bottom: 2px solid rgba(255,255,255,0.1);
+}
+
+/* What-If section */
+.whatif-container {
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255,0.3);
+}
